@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d0d0d">
+  <meta name="description" content="Practical notes on digital marketing, video editing, Meta ads and creative design from JU.ADMOTION.">
+  <meta property="og:title" content="Notes on Creative Growth | JU.ADMOTION">
+  <meta property="og:description" content="Practical notes on digital marketing, video editing, Meta ads and creative design from JU.ADMOTION.">
+  <meta property="og:type" content="website">
+  <title>Notes on Creative Growth | JU.ADMOTION</title>
+  <link rel="icon" href="assets/ju-admotion-logo.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: dark; --bg: #0d0d0d; --surface: #111113; --card: #171719; --gold: #d4af37; --gold-light: #e8d5a3; --ink: #f5f1e8; --muted: #b8b2a3; --line: rgba(232,213,163,.16); --sans: "Inter", sans-serif; --display: "Playfair Display", serif; --wrap: 1180px; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .wrap { width: min(var(--wrap), calc(100% - 64px)); margin-inline: auto; }
+    .email-bar { display: flex; min-height: 48px; align-items: center; justify-content: center; padding: 10px 16px; background: var(--gold); color: #17130b; font-size: 13px; font-weight: 700; letter-spacing: .06em; text-align: center; }
+    .email-bar a { text-decoration: underline; text-underline-offset: 3px; }
+    .email-bar a:hover { color: #fff; }
+    .topline { display: flex; min-height: 30px; align-items: center; justify-content: center; padding: 0 12px; background: #f5f2eb; color: #65583f; font-size: 9px; font-weight: 600; letter-spacing: .16em; text-align: center; text-transform: uppercase; }
+    .site-header { position: sticky; z-index: 10; top: 0; border-bottom: 1px solid rgba(31,32,36,.08); background: rgba(255,255,255,.97); color: #202024; box-shadow: 0 5px 22px rgba(31,32,36,.035); backdrop-filter: blur(16px); }
+    .nav { position: relative; display: flex; min-height: 104px; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: inline-flex; flex-shrink: 0; align-items: center; gap: 12px; }
+    .brand-logo { display: block; width: 64px; height: 64px; border-radius: 50%; object-fit: cover; }
+    .brand-lockup { display: grid; gap: 4px; }
+    .brand-name { color: #202024; font: 700 18px/1 var(--display); letter-spacing: .055em; }
+    .brand-caption { color: #81745a; font-size: 9px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: clamp(18px, 2.5vw, 34px); }
+    .nav-services { position: relative; }
+    .nav-services summary { display: inline-flex; min-height: 48px; align-items: center; color: #4e4d4a; cursor: pointer; font-size: 16px; list-style: none; }
+    .nav-services summary::-webkit-details-marker { display: none; }
+    .nav-services summary::after { margin-left: 6px; color: #d4af37; content: "+"; }
+    .nav-services[open] summary::after { content: "−"; }
+    .nav-services-menu { position: absolute; z-index: 4; top: calc(100% - 2px); left: -12px; display: grid; min-width: 190px; padding: 8px; border: 1px solid var(--line); border-radius: 8px; background: #fff; box-shadow: 0 14px 28px rgba(31,32,36,.12); }
+    .nav-services-menu a { padding: 10px; border-radius: 5px; color: #4e4d4a; font-size: 13px; }
+    .nav-services-menu a:hover { background: rgba(212,175,55,.12); }
+    .nav-links a { position: relative; display: inline-flex; min-height: 48px; align-items: center; color: #4e4d4a; font-size: 16px; font-weight: 500; }
+    .nav-links a::after { position: absolute; right: 0; bottom: 5px; left: 0; height: 1px; transform: scaleX(0); transform-origin: left; background: #d4af37; content: ""; transition: transform .2s ease; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: #765a28; }
+    .nav-links a:hover::after, .nav-links a[aria-current="page"]::after { transform: scaleX(1); }
+    .nav-cta { display: inline-flex; min-height: 46px; align-items: center; gap: 9px; padding: 0 19px; border: 1px solid #876324; border-radius: 7px; background: #876324; color: #fff; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; transition: transform .2s, background .2s; }
+    .nav-cta:hover { transform: translateY(-2px); background: #6f501b; }
+    .menu-toggle { display: none; width: 42px; height: 42px; border: 1px solid rgba(31,32,36,.16); border-radius: 50%; background: #fff; color: #202024; cursor: pointer; font-size: 19px; }
+    a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid #876324; outline-offset: 4px; }
+    .blog-hero { position: relative; overflow: hidden; padding: clamp(78px, 12vw, 145px) 0 88px; border-bottom: 1px solid var(--line); background: radial-gradient(ellipse at 84% 28%, rgba(212,175,55,.12), transparent 35%), linear-gradient(135deg, #101012, #0d0d0d 70%); }
+    .blog-hero::after { position: absolute; top: -170px; right: -110px; width: 450px; height: 450px; border: 1px solid rgba(212,175,55,.1); border-radius: 50%; box-shadow: 0 0 0 55px rgba(212,175,55,.025), 0 0 0 110px rgba(212,175,55,.02); content: ""; pointer-events: none; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    .eyebrow::before { width: 25px; height: 1px; background: currentColor; content: ""; }
+    h1, h2, h3, p { overflow-wrap: anywhere; }
+    .blog-hero h1 { max-width: 770px; margin: 18px 0 19px; font: 600 clamp(46px, 7vw, 78px)/1.03 var(--display); letter-spacing: -.055em; }
+    .blog-hero h1 span { color: var(--gold-light); }
+    .hero-copy { max-width: 570px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .hero-note { display: inline-flex; align-items: center; gap: 10px; margin-top: 30px; color: #8e887d; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+    .hero-note::before { width: 28px; height: 1px; background: var(--gold); content: ""; }
+    .blog-section { padding: 80px 0 110px; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 30px; }
+    .section-head h2 { margin: 12px 0 0; font: 600 clamp(30px, 4vw, 44px)/1.15 var(--display); letter-spacing: -.035em; }
+    .post-count { margin: 0 0 5px; color: #8e887d; font-size: 11px; }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 30px; }
+    .filter-button { min-height: 36px; padding: 0 14px; border: 1px solid rgba(232,213,163,.2); border-radius: 999px; background: transparent; color: var(--muted); cursor: pointer; font-size: 10px; transition: color .2s, border-color .2s, background .2s; }
+    .filter-button:hover, .filter-button[aria-pressed="true"] { border-color: var(--gold); background: rgba(212,175,55,.1); color: var(--gold-light); }
+    .post-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: start; }
+    .post-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: linear-gradient(145deg, rgba(255,255,255,.025), transparent 55%), var(--card); transition: border-color .2s, transform .2s, box-shadow .2s; }
+    .post-card:hover, .post-card[open] { transform: translateY(-3px); border-color: rgba(212,175,55,.4); box-shadow: 0 14px 35px rgba(0,0,0,.22); }
+    .post-card[hidden] { display: none; }
+    .post-card summary { min-height: 100%; padding: 25px 23px 22px; cursor: pointer; list-style: none; }
+    .post-card summary::-webkit-details-marker { display: none; }
+    .post-image { display: block; width: calc(100% + 46px); height: 180px; margin: -25px -23px 20px; border-bottom: 1px solid var(--line); background: #101012; object-fit: cover; }
+    .post-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .post-category { color: var(--gold); font-size: 9px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .post-time { color: #8e887d; font-size: 9px; white-space: nowrap; }
+    .post-card h3 { min-height: 68px; margin: 24px 0 12px; font: 600 22px/1.25 var(--display); letter-spacing: -.015em; }
+    .post-excerpt { min-height: 70px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+    .read-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 23px; color: var(--gold-light); font-size: 10px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+    .read-link span { transition: transform .2s; }
+    .post-card:hover .read-link span:last-child, .post-card[open] .read-link span:last-child { transform: translate(3px, -2px); }
+    .post-card[open] .read-link { color: var(--gold); }
+    .post-body { padding: 0 23px 24px; border-top: 1px solid var(--line); color: #c1bbb0; font-size: 13px; line-height: 1.85; }
+    .post-body p { margin: 17px 0 0; }
+    .post-body h4 { margin: 21px 0 0; color: var(--ink); font: 600 17px/1.4 var(--display); }
+    .post-body ul { display: grid; gap: 8px; padding-left: 20px; }
+    .post-body li::marker { color: var(--gold); }
+    .post-media { margin: 22px 0 0; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: #090909; }
+    .post-media video { display: block; width: 100%; max-height: 420px; background: #090909; }
+    .post-media figcaption { padding: 10px 13px; color: #9e9789; font-size: 10px; line-height: 1.6; }
+    .post-media figcaption a { color: var(--gold-light); text-decoration: underline; text-underline-offset: 3px; }
+    .contact-band { padding: 70px 0; border-top: 1px solid var(--line); background: radial-gradient(ellipse at 85% 50%, rgba(212,175,55,.09), transparent 40%), #111113; }
+    .contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .contact-inner h2 { margin: 13px 0 8px; font: 600 clamp(30px, 4vw, 44px)/1.15 var(--display); }
+    .contact-inner p { max-width: 520px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .button { display: inline-flex; flex-shrink: 0; min-height: 48px; align-items: center; justify-content: center; gap: 10px; padding: 0 20px; border: 1px solid var(--gold); border-radius: 7px; background: var(--gold); color: #17130b; font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; transition: transform .2s, background .2s, box-shadow .2s; }
+    .button:hover { transform: translateY(-3px); background: var(--gold-light); box-shadow: 0 10px 28px rgba(212,175,55,.2); }
+    .footer { padding: 64px 0 42px; border-top: 1px solid var(--line); background: #090909; color: var(--muted); }
+    .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; }
+    .footer-brand { display: inline-flex; align-items: center; gap: 13px; }
+    .footer-brand img { width: 48px; height: 48px; border-radius: 50%; }
+    .footer-brand strong { color: var(--ink); font: 600 15px var(--display); letter-spacing: .05em; }
+    .blog-footer-nav { display: flex; flex-wrap: wrap; gap: 10px 16px; max-width: 480px; color: var(--muted); font-size: 11px; }
+    .blog-footer-nav a:hover, .footer-copy a:hover { color: var(--gold-light); }
+    .footer-copy { margin: 0; font-size: 12px; line-height: 1.7; text-align: right; }
+    .blog-whatsapp { position: fixed; z-index: 20; right: 20px; bottom: 20px; display: grid; width: 52px; height: 52px; place-items: center; border: 1px solid rgba(255,255,255,.35); border-radius: 50%; background: #25d366; color: #082b16; box-shadow: 0 8px 24px rgba(0,0,0,.32); font-size: 12px; font-weight: 800; letter-spacing: .04em; }
+    @media (max-width: 1100px) { .nav { gap: 14px; } .nav-links { gap: 12px; } .nav-links a { font-size: 14px; } .nav-services summary { font-size: 14px; } .brand-name { font-size: 16px; } .nav-cta { padding-inline: 14px; font-size: 10px; } }
+    @media (max-width: 700px) {
+      .wrap { width: min(100% - 38px, var(--wrap)); }
+      .email-bar { min-height: 42px; padding: 9px 12px; font-size: 12px; }
+      .topline { font-size: 8px; }
+      .nav { min-height: 82px; }
+      .brand-logo { width: 56px; height: 56px; }
+      .brand { gap: 8px; }
+      .brand-name { font-size: 16px; }
+      .brand-caption { display: block; font-size: 7px; }
+      .nav-cta { display: none; }
+      .menu-toggle { display: grid; place-items: center; }
+      .nav-links { position: absolute; top: 82px; right: -19px; left: -19px; display: none; align-items: stretch; padding: 10px 19px 15px; border-bottom: 1px solid var(--line); background: #fff; box-shadow: 0 14px 20px rgba(31,32,36,.08); }
+      .nav-links.is-open { display: grid; }
+      .nav-links a { min-height: 44px; font-size: 14px; }
+      .nav-links a::after { right: auto; width: 30px; }
+      .nav-services summary { min-height: 44px; color: #e5dfd3; font-size: 14px; }
+      .nav-services-menu { position: static; min-width: 0; padding: 5px; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+      .nav-services-menu a { min-height: 40px; border-bottom: 1px solid var(--line); color: #e5dfd3; }
+      .blog-hero { padding: 76px 0 65px; }
+      .blog-hero h1 { font-size: clamp(43px, 12vw, 62px); }
+      .hero-copy { font-size: 13px; }
+      .blog-section { padding: 64px 0 78px; }
+      .section-head { align-items: start; flex-direction: column; gap: 8px; }
+      .filters { gap: 7px; }
+      .filter-button { min-height: 34px; padding: 0 11px; font-size: 9px; }
+      .post-grid { grid-template-columns: 1fr; gap: 12px; }
+      .post-card summary { padding: 22px 19px 19px; }
+      .post-image { width: calc(100% + 38px); height: 195px; margin: -22px -19px 18px; }
+      .post-card h3, .post-excerpt { min-height: 0; }
+      .post-card h3 { margin-top: 19px; font-size: 21px; }
+      .post-body { padding: 0 19px 20px; }
+      .contact-band { padding: 58px 0; }
+      .contact-inner,       .footer { padding: 54px 0 34px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; gap: 20px; }
+      .footer-copy { text-align: left; }
+    }
+    @media (min-width: 701px) and (max-width: 840px) {
+      .menu-toggle { display: grid; place-items: center; }
+      .nav { gap: 14px; }
+      .nav-links { position: absolute; top: calc(100% + 1px); right: -18px; left: -18px; display: none; align-items: stretch; padding: 10px 19px 15px; border: 1px solid var(--line); border-top: 0; background: #111113; box-shadow: 0 14px 20px rgba(0,0,0,.25); }
+      .nav-links.is-open { display: grid; }
+      .nav-links a { min-height: 44px; font-size: 13px; }
+      .nav-services summary { min-height: 44px; color: #e5dfd3; font-size: 13px; }
+      .nav-services-menu { position: static; min-width: 0; padding: 5px; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+      .nav-services-menu a { min-height: 40px; border-bottom: 1px solid var(--line); color: #e5dfd3; }
+      .nav-cta { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <div class="email-bar"><a href="mailto:sharedigital204@gmail.com">sharedigital204@gmail.com</a></div>
+  <div class="topline">Digital strategy · Video storytelling · Creative design</div>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="index.html#home" aria-label="JU.ADMOTION home">
+        <img class="brand-logo" src="assets/ju-admotion-logo.webp" alt="" width="768" height="768" loading="lazy">
+        <span class="brand-lockup"><span class="brand-name">JU.ADMOTION</span><span class="brand-caption">Strategy · Story · Design</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#home">Home</a><a href="about.html">About</a><details class="nav-services"><summary>Services</summary><div class="nav-services-menu"><a href="services.html">All services</a><a href="digital-marketing.html">Digital marketing</a><a href="video-editing.html">Video editing</a></div></details><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a><a href="blog.html" aria-current="page">Blog</a><a href="contact.html">Contact</a>
+      </div>
+      <a class="nav-cta" href="contact.html">Start a project <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+    </nav>
+  </header>
+  <main>
+    <section class="blog-hero">
+      <div class="wrap">
+        <div class="eyebrow">The JU.ADMOTION journal</div>
+        <h1>Ideas for brands<br>ready to <span>grow with purpose.</span></h1>
+        <p class="hero-copy">Practical notes on digital marketing, video storytelling and creative design—made to help you make your next move with more clarity.</p>
+        <div class="hero-note">Thoughtful ideas. Useful takeaways.</div>
+      </div>
+    </section>
+    <section class="blog-section" aria-labelledby="articlesTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Explore the journal</div><h2 id="articlesTitle">Notes for your next idea.</h2></div>
+          <p class="post-count" id="postCount" aria-live="polite">6 articles</p>
+        </div>
+        <div class="filters" role="group" aria-label="Filter articles by topic">
+          <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All topics</button>
+          <button class="filter-button" type="button" data-filter="strategy" aria-pressed="false">Strategy</button>
+          <button class="filter-button" type="button" data-filter="video" aria-pressed="false">Video editing</button>
+          <button class="filter-button" type="button" data-filter="ads" aria-pressed="false">Meta ads</button>
+          <button class="filter-button" type="button" data-filter="design" aria-pressed="false">Creative design</button>
+        </div>
+        <div class="post-grid" id="postGrid">
+          <details class="post-card" id="article-content-strategy" data-category="strategy">
+            <summary><img class="post-image" src="assets/team-planning.webp" alt="Creative colleagues planning a project around a table" width="1200" height="800" loading="lazy"><div class="post-topline"><span class="post-category">Strategy</span><span class="post-time">4 min read</span></div><h3>A clearer content strategy starts with one goal</h3><p class="post-excerpt">Before planning a month of posts, get specific about what your content needs to do for the people you want to reach.</p><span class="read-link"><span class="read-label">Read article</span> <span aria-hidden="true">↗</span></span></summary>
+            <div class="post-body"><p>A content calendar is a useful tool, but it is not a strategy on its own. A strong plan begins with a clear business priority and a real understanding of the audience you want to help.</p><h4>Start with the outcome</h4><p>Choose one primary goal for the next campaign or planning period: build awareness, explain an offer, start more conversations, or support an upcoming launch. A focused goal makes it easier to decide what belongs in the plan—and what does not.</p><h4>Give every post a job</h4><p>Balance useful education, brand perspective, proof of your process, and a clear invitation to take the next step. Each post should make sense to someone encountering your brand for the first time.</p><p>Keep the plan flexible. Review the questions people ask and the posts they save or share, then use those signals to shape what you make next.</p></div>
+          </details>
+          <details class="post-card" id="article-video-opening" data-category="video">
+            <summary><img class="post-image" src="assets/video-editing-photo.jpg" alt="Video editor reviewing a project on a computer screen" width="683" height="1024" loading="lazy"><div class="post-topline"><span class="post-category">Video editing</span><span class="post-time">4 min read</span></div><h3>Make the first three seconds earn attention</h3><p class="post-excerpt">A strong short-form video opening is clear, immediate and relevant—not just fast for the sake of being fast.</p><span class="read-link"><span class="read-label">Read article</span> <span aria-hidden="true">↗</span></span></summary>
+            <div class="post-body"><p>The opening moments help viewers decide whether a video is meant for them. Instead of beginning with a long introduction, lead with the most useful idea, a specific question, or a visual that sets up the story.</p><figure class="post-media"><video controls preload="none" playsinline poster="https://images.pexels.com/videos/34845729/editing-editing-software-premiere-pro-video-editing-34845729.jpeg?auto=compress&amp;w=1200"><source src="https://videos.pexels.com/video-files/34845729/14770076_2560_1440_60fps.mp4" type="video/mp4">Your browser does not support HTML video. <a href="https://www.pexels.com/video/close-up-of-video-editing-timeline-interface-34845729/" target="_blank" rel="noopener noreferrer">Watch the editing timeline clip on Pexels.</a></video><figcaption>Video editing timeline footage by <a href="https://www.pexels.com/@aamirsomewhere/" target="_blank" rel="noopener noreferrer">Aamir Somewhere on Pexels</a>.</figcaption></figure><h4>Build a simple opening</h4><ul><li>Show the subject or outcome early.</li><li>Use on-screen text to make the topic clear without sound.</li><li>Cut pauses that do not add meaning, but leave enough room for the message to land.</li></ul><p>Then make sure the rest of the edit delivers on the opening. A relevant, understandable video earns more trust than a dramatic hook that promises something the content never provides.</p></div>
+          </details>
+          <details class="post-card" id="article-ad-testing" data-category="ads">
+            <summary><img class="post-image" src="assets/analytics-dashboard.webp" alt="Analytics dashboard showing campaign data and charts" width="1200" height="800" loading="lazy"><div class="post-topline"><span class="post-category">Meta ads</span><span class="post-time">5 min read</span></div><h3>A simple starting point for Meta ad creative tests</h3><p class="post-excerpt">Learn from your creative tests by changing one meaningful idea at a time and keeping the campaign objective in view.</p><span class="read-link"><span class="read-label">Read article</span> <span aria-hidden="true">↗</span></span></summary>
+            <div class="post-body"><p>Ad creative testing is more useful when each variation has a reason to exist. Rather than changing the visual, copy, audience and offer all at once, make a small set of purposeful variations around one hypothesis.</p><h4>Test a clear variable</h4><p>For example, compare two opening messages while keeping the offer and format consistent. Or keep the message steady and compare a product-led visual with a process-led one. This makes the result easier to interpret.</p><h4>Measure against the goal</h4><p>Use a success measure that matches the campaign objective, and give the test enough time and budget to gather meaningful data. Results can vary with audience, season, placement and account history, so treat each test as a learning opportunity—not a guarantee of future performance.</p></div>
+          </details>
+          <details class="post-card" data-category="design">
+            <summary><img class="post-image" src="assets/hero-design.webp" alt="Digital illustration being drawn on a graphics tablet" width="1600" height="1000" loading="lazy"><div class="post-topline"><span class="post-category">Creative design</span><span class="post-time">4 min read</span></div><h3>Create a visual system people can recognise</h3><p class="post-excerpt">Consistency does not mean every post looks identical. A few intentional design rules can make a feed feel connected and distinct.</p><span class="read-link"><span class="read-label">Read article</span> <span aria-hidden="true">↗</span></span></summary>
+            <div class="post-body"><p>A recognisable visual identity helps your audience connect separate posts to the same brand. You can create that connection without repeating the exact same layout every time.</p><h4>Choose a few useful rules</h4><ul><li>Set a focused colour palette and decide how accent colours are used.</li><li>Choose a small type system with clear heading and body styles.</li><li>Keep spacing, image treatments and logo placement consistent.</li></ul><p>Use these rules as a foundation, then vary composition to suit the content. A carousel explaining a process may need a different layout from a campaign announcement while still feeling like it belongs to your brand.</p></div>
+          </details>
+          <details class="post-card" data-category="strategy">
+            <summary><img class="post-image" src="assets/collaboration-space.webp" alt="Calm creative studio workspace prepared for a brand planning session" width="1200" height="800" loading="lazy"><div class="post-topline"><span class="post-category">Strategy</span><span class="post-time">4 min read</span></div><h3>Turn a project brief into a consistent brand voice</h3><p class="post-excerpt">A short messaging guide gives everyone creating content a shared starting point, from the first caption to the final edit.</p><span class="read-link"><span class="read-label">Read article</span> <span aria-hidden="true">↗</span></span></summary>
+            <div class="post-body"><p>A brand voice should make it easier to recognise and understand your business. It does not need to be a long document: a few clear principles can make everyday creative decisions more consistent.</p><h4>Capture the essentials</h4><p>Write down who you are speaking to, what they care about, what your brand helps them do, and the tone you want to use. Add a few examples of language that sounds right for your business—and a few that does not.</p><p>Keep the guide close to your content brief. When the audience, goal and key message are clear, design and copy can work together instead of competing for attention.</p></div>
+          </details>
+          <details class="post-card" data-category="video">
+            <summary><img class="post-image" src="assets/creative-demo-production-poster.jpg" alt="Camera setup ready to record a short-form video" width="1280" height="720" loading="lazy"><div class="post-topline"><span class="post-category">Video editing</span><span class="post-time">3 min read</span></div><h3>A practical checklist before publishing a reel</h3><p class="post-excerpt">A quick final review can catch the small issues that distract from an otherwise polished short-form video.</p><span class="read-link"><span class="read-label">Read article</span> <span aria-hidden="true">↗</span></span></summary>
+            <div class="post-body"><p>Before publishing, watch the video once as a viewer—not just as the person who edited it. Check that the message is easy to follow and that the ending gives the audience a natural next step.</p><figure class="post-media"><video controls preload="none" playsinline poster="https://images.pexels.com/videos/3190131/free-video-3190131.jpg?auto=compress&amp;w=1200"><source src="https://videos.pexels.com/video-files/3190131/3190131-uhd_2560_1440_24fps.mp4" type="video/mp4">Your browser does not support HTML video. <a href="https://www.pexels.com/video/a-modern-video-camera-recorder-mounted-on-a-camera-stand-3190131/" target="_blank" rel="noopener noreferrer">Watch the camera footage on Pexels.</a></video><figcaption>Camera footage by <a href="https://www.pexels.com/@hellochrisgonzalez/" target="_blank" rel="noopener noreferrer">Chris Gonzalez on Pexels</a>.</figcaption></figure><h4>Final review</h4><ul><li>Confirm the first frame and opening line make the topic clear.</li><li>Check captions for spelling, timing and contrast.</li><li>Make sure text is not hidden by platform interface elements.</li><li>Listen for uneven audio levels and distracting background noise.</li><li>Review the call to action and destination link.</li></ul><p>Export and playback settings can vary by platform. Check the current publishing requirements before scheduling your final file.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="contact-band">
+      <div class="contact-inner wrap">
+        <div><div class="eyebrow">Have a project in mind?</div><h2>Let’s make your next idea real.</h2><p>From a single creative asset to ongoing support, start with a brief and we can shape the right scope together.</p></div>
+        <a class="button" href="contact.html">Start a conversation <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-inner wrap">
+      <a class="footer-brand" href="index.html#home"><img src="assets/ju-admotion-logo.webp" alt="" width="768" height="768" loading="lazy"><strong>JU.ADMOTION</strong></a>
+      <nav class="blog-footer-nav" aria-label="Footer navigation"><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+      <p class="footer-copy">© <span id="year"></span> JU.ADMOTION · Creative work, made with purpose.<br><a href="mailto:sharedigital204@gmail.com">Email</a> · <a href="https://wa.me/919451445603" target="_blank" rel="noopener noreferrer">WhatsApp</a> · <a href="https://www.instagram.com/ju.admotion/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+    </div>
+  </footer>
+  <a class="blog-whatsapp" href="https://wa.me/919451445603?text=Hello%20JU.ADMOTION%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat with JU.ADMOTION on WhatsApp">WA</a>
+  <script>
+    const menuToggle = document.querySelector('#menuToggle');
+    const navLinks = document.querySelector('#navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      navLinks.classList.toggle('is-open', !isOpen);
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+      menuToggle.textContent = isOpen ? '☰' : '×';
+    });
+    navLinks.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+      navLinks.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation menu');
+      menuToggle.textContent = '☰';
+    }));
+    document.querySelectorAll('.post-card').forEach((card) => {
+      card.addEventListener('toggle', () => {
+        card.querySelector('.read-label').textContent = card.open ? 'Close article' : 'Read article';
+      });
+    });
+    function openLinkedArticle() {
+      const article = document.getElementById(window.location.hash.slice(1));
+      if (!(article instanceof HTMLDetailsElement) || !article.matches('.post-card')) return;
+      article.open = true;
+      window.setTimeout(() => article.scrollIntoView({ block: 'center', behavior: 'smooth' }), 0);
+    }
+    openLinkedArticle();
+    window.addEventListener('hashchange', openLinkedArticle);
+    document.querySelectorAll('.filter-button').forEach((button) => {
+      button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        document.querySelectorAll('.filter-button').forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        document.querySelectorAll('.post-card').forEach((card) => {
+          card.hidden = filter !== 'all' && card.dataset.category !== filter;
+        });
+        const count = [...document.querySelectorAll('.post-card')].filter((card) => !card.hidden).length;
+        document.querySelector('#postCount').textContent = `${count} ${count === 1 ? 'article' : 'articles'}`;
+      });
+    });
+    document.querySelector('#year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
